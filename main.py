@@ -93,5 +93,5 @@ def not_fount(error):
     return make_response(json.dumps(new_dict),200)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False,host='0.0.0.0',port=50033)
     # main()
