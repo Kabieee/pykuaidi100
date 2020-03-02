@@ -53,6 +53,7 @@ app = Flask(__name__)
 def after(response):
     response.headers['Content-Type'] = 'application/json;charset=UTF-8'
     response.headers['Connection'] = 'close'
+    response.headers['Access-Control-Allow-Origin'] = '*'
     return response
 
 @app.route('/query/',methods=['POST','GET'])
