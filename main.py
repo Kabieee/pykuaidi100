@@ -54,6 +54,8 @@ def after(response):
     response.headers['Content-Type'] = 'application/json;charset=UTF-8'
     response.headers['Connection'] = 'close'
     response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers['Access-Control-Allow-Headers'] = 'content-type,x-requested-with,origin,accept'
+    response.headers['Access-Control-Allow-Methods'] = 'GET,POST,PUT,OPTIONS'
     return response
 
 @app.route('/query/',methods=['POST','GET'])
